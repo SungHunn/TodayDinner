@@ -10,6 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.AiPrj.TodayDinner.ui.screen.HomeScreen
 import com.AiPrj.TodayDinner.ui.theme.TodayDinnerTheme
 
 class MainActivity : ComponentActivity() {
@@ -22,25 +23,12 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                    HomeScreen(
+                        onCameraClick = { /* TODO: 카메라 클릭 처리 */ },
+                        onGalleryClick = { /* TODO: 갤러리 클릭 처리 */ }
+                    )
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    TodayDinnerTheme {
-        Greeting("Android")
     }
 }
